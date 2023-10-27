@@ -1,6 +1,7 @@
 import streamlit as st
 import networkx as nx
 import matplotlib.pyplot as plt
+import pygraphviz as pgv
 
 # SWOT analysis data
 swot_data = {
@@ -21,15 +22,21 @@ def generate_swot_mind_map():
             G.add_node(item)
             G.add_edge(category, item)
 
+    # Create a layout using pygraphviz
+    pos = nx.nx_agraph.graphviz_layout(G, prog='dot', root='Strengths (Сильные стороны)')
+
     # Draw the graph
-    pos = nx.spring_layout(G)
-    nx.draw_networkx(G, pos, with_labels=True, node_color='lightblue', node_size=2000, font_size=12, font_weight='bold')
+    plt.figure(figsize=(10, 8))
+    nx.draw_networkx(G, pos, with_labels=False, node_color='lightblue', node_size=2000, font_size=12, font_weight='bold')
+    nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold', font_color='black')
     plt.axis('off')
     st.pyplot()
 
+# Set a white background color for the Streamlit app
+st.markdown('<style>body{background-color: #ffffff;}</style>', unsafe_allow_html=True)
+
+# Display the title
+st.title('SWOT-анализ открытого коммерческого хостинга с открытым искусственным интеллектом для университетов/студентов/преподавателей')
+
 # Call the function to generate and display the SWOT analysis mind map
 generate_swot_mind_map()
-
-if __name__ == '__main__':
-    st.title('SWOT-анализ открытого коммерческого хостинга с открытым искусственным интеллектом для университетов/студентов/преподавателей')
-    generate_swot_mind_map()
