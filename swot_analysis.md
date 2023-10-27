@@ -1,5 +1,6 @@
-# SWOT Analysis
-# Open-Source Commercial Hosting для унивеситетов/преподвателей/стужентов (с имплементацией Open-Source AI)
+# SWOT Analysis:
+Open-Source Commercial Hosting для унивеситетов/преподвателей/стужентов (с имплементацией Open-Source AI)
+
 ## Сильные стороны (Strengths):
 
 - Бесплатное использование: Открытые исходные коды и бесплатные платформы, такие как Binder, Streamlit, Data Science, Data Computing и Jupyter, позволяют университетам, студентам и преподавателям бесплатно пользоваться хостингом и искусственным интеллектом.
