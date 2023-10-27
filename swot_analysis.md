@@ -1,5 +1,4 @@
-# SWOT Analysis:
-Open-Source Commercial Hosting для унивеситетов/преподвателей/стужентов (с имплементацией Open-Source AI)
+# SWOT. Open-Source Commercial Hosting [для унивеситетов/преподавателей/студентов (с имплементацией Open-Source AI)]
 
 ## Сильные стороны (Strengths):
 
